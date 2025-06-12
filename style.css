@@ -60,8 +60,9 @@ nav{
 
 /* header */
 
+/*corpo*/
 .corpo{
-    height: 60vh;
+    height: 70vh;
     width: 100%;
     display: flex;
 }
@@ -98,5 +99,55 @@ nav{
 .corpo-convite-login{
     font-size: 28px;
     border: none;
-    background-color: none;
+    background-color: #FFFDFA;
+}
+
+
+/*carrossel*/
+.carrossel{
+    height: 50vh;
+    width: 100%;
+    background-color: #454545;
+}
+
+/*informações*/
+.informações{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.informações > h2{
+    color: #F9DF73;
+    font-size: 48px;
+}
+
+.informações-container{
+    display: flex;
+    gap: 50px;
+}
+
+.informações-container-box{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    background-color: #7676F0;
+    border-radius: 15px;
+    padding: 30px;
+    width: 400px;
+}
+
+.informações-container-box > h3{
+    color: #F9DF73;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.informações-container-box > p{
+    color: #FFFDFA;
+    font-size: 25px;
+    font-weight: 400;
 }
