@@ -151,3 +151,11 @@ nav{
     font-size: 25px;
     font-weight: 400;
 }
+
+footer{
+    background-color: #7676F0;
+}
+
+.rodapé{
+    display: flex;
+}
