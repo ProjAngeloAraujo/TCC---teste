@@ -116,7 +116,8 @@ nav{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 20px;
+    gap: 50px;
+    padding: 100px 100px;
 }
 
 .informações > h2{
@@ -126,7 +127,10 @@ nav{
 
 .informações-container{
     display: flex;
-    gap: 50px;
+    flex-wrap: wrap;          
+    justify-content: center;  
+    gap: 100px;
+    max-width: 1000px;
 }
 
 .informações-container-box{
@@ -154,8 +158,21 @@ nav{
 
 footer{
     background-color: #7676F0;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .rodapé{
     display: flex;
+    width: 60%;
+    color: #F9DF73;
+    gap: 0px;
+    justify-content: space-around;
+}
+
+.rodapé-info{
+    font-size: 20px;
+    color: #F9DF73;
 }
