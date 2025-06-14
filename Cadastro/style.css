@@ -17,7 +17,6 @@ nav{
     padding: 10px 50px;
     display: flex;
     align-items: end;
-    background-color: aqua;
 }
 
 .voltar img{
@@ -30,6 +29,82 @@ nav{
 header{
     height: 85vh;
     width: 100%;
+    display: flex;
+}
+
+.cadastro{
+    flex: 2;
+}
+
+.informação{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 0;
+    gap: 50px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+h2{
+    font-size: 40px;
+}
+
+input{
+    width: 800px;
+    font-size: 48px;
+    padding: 20px;
+    color: #FFFDFA;
+    background-color: #7676F0;
+    border: none;
+    border-radius: 15px;
+}
+
+input::placeholder{
+    color: #FFFDFA;
+}
+
+.form-senha{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 10px;
+}
+
+.button-senha{
+    background-color: #FFFDFA;
+    border: none;
+    color: #7676F0;
+}
+
+.google-button{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 800px;
+    font-size: 48px;
+    padding: 20px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.img-google{
+    height: 40px;
+    width: 40px;
+}
+
+.text-google{
+    width: 100%;
+}
+
+.animação{
+    flex: 1;
 }
 
 
