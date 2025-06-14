@@ -82,6 +82,24 @@ input::placeholder{
     color: #7676F0;
 }
 
+.container-button-logar{
+    width: 100%;
+    text-align: center;
+}
+
+.button-logar{
+    width: 200px;
+    font-size: 40px;
+    font-weight: 700;
+    border: none;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #FFFDFA;
+    color: #7676F0;
+    padding: 20px;
+    text-align: center;
+}
+
 .google-button{
     display: flex;
     align-items: center;
