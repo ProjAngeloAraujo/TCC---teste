@@ -3,13 +3,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-y: scroll; 
-    scrollbar-width: none;
-    -ms-overflow-style: none;
 }
 
 .container{
     background-color: #FFFDFA;
+    overflow-y: scroll; 
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 
@@ -62,9 +62,9 @@ nav{
 
 /*corpo*/
 .corpo{
-    height: 70vh;
     width: 100%;
     display: flex;
+    padding: 20px 0;
 }
 
 .corpo div{
@@ -175,4 +175,5 @@ footer{
 .rodapé-info{
     font-size: 20px;
     color: #F9DF73;
+    list-style-type: none;
 }
