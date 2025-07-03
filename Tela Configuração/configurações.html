@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <nav>
+        <nav class="nav">
             <div class="logo">
                 <a><img src="IMG/OTTO.png"></a>
                 <p>Plataforma OTTO</p>
@@ -23,31 +23,38 @@
         </nav>
         <header>
             <section id="configuração" class="conteudo">
-                    <div class="tema">
-                        <h2>Tema</h2>
-                        <ul class="ul-tema">
-                            <li><button>Claro</button></li>
-                            <li><button>Escuro</button></li>
-                        </ul> 
-                    </div>
-                    <div class="privacidade">
-                        <h2>Privacidade</h2>
-                        <ul>
-                            <li>Controle sobre dados compartilhados</li>
-                            <li>Visualizar termos de uso e política de privacidade</li>
-                        </ul>
-                    </div>
-                    <div class="acessiblidade">
-                        <h2>Acessibilidade</h2>
-                    </div>
-                    <div class="suporte">
-                        <ul>
-                            <li><button>FAQ</button></li>
-                            <li><button>Ajuda/Suporte</button></li>
-                            <li><button>Editar dados</button></li>
-                            <li><button>Sair da conta</button></li>
-                            <li><button>Excluir conta</button></li>
-                        </ul>
+                    <div class="conteudo-container">
+                        <nav class="conteudo-nav">
+                            <button class="active">Conta</button>
+                            <button>Interface</button>
+                            <button>Ajuda e Suporte</button>
+                        </nav>
+                            <form>
+                                <label for=" E-mail">
+                                    E-mail
+                                    <input type="text" name="E-mail" placeholder="E-mail..">
+                                </label>
+                                
+                                <label for="Confirmar e-mail">
+                                    Confirmar e-mail
+                                    <input type="text" name="Confirmar e-mail" placeholder="Confirmar e-mail">
+                                </label>
+                                
+
+                                <label for="senha">
+                                    Editar senha
+                                    <input type="text" name="senha" placeholder="Editar senha...">
+                                </label>
+                                
+
+                                <label for="Confirmar senha">
+                                    Confirmar senha
+                                    <input type="text" name="Confirmar senha" placeholder="Confirmar senha...">
+                                </label>
+                                
+
+                                <button>Salvar</button>
+                            </form>
                     </div>
             </section>
         </header>

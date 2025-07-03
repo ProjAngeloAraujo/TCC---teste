@@ -17,7 +17,7 @@ body, html{
 
 /* nav */
 
-nav {
+.nav {
   width: 20%;
   height: 100vh;
   padding: 80px 0 0 0; /* Remove padding esquerdo */
@@ -83,41 +83,81 @@ header{
   width: 80%;
   background-color: aliceblue;
   border-radius: 25px;
-  padding: 30px;
+  padding: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.conteudo div{
+.conteudo-container{
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
-.ul-tema{
+.conteudo-nav{
+  width: 100%;
+  height: auto;
   display: flex;
-  flex-direction: row;
-  gap: 50px;
+  background-color: #7676F0;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 
-ul{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-li{
-  list-style-type: none;
-  font-size: 25px;
-}
-
-button{
+.conteudo-nav button{
+  flex: 1;
+  padding: 10px;
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  background-color: #7676F0;
   border: none;
-  background: none;
-  font-size: 25px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  color: white;
+  font-weight: bold;
 }
 
-.suporte button{
+.conteudo-nav button.active{
+  background-color: #f4e66c;
+  color: black;
+}
+
+form{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+form label{
+  font-size: clamp(1rem, 2.5vw, 2rem);
   font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+form input{
+  background-color: #e2e2e2;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 60%;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+form button{
+  padding: 10px 50px;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  background-color: #f4e66c;
+  border-radius: 15px;
 }
