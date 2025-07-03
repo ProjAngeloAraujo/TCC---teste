@@ -144,19 +144,22 @@ nav{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 3% 20px;
     color: #FFFDFA;
 }
 
 .carrosel-slide-info h2{
-    font-size: clamp(3rem, 4.5vw, 2rem);
+    font-size: clamp(3rem, 4.5vw, 4rem);
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
-#h2-especial{
+#h2-especial1{
+    font-size: clamp(2rem, 3.5vw, 3rem);
+}
+
+#h2-especial2{
     font-size: clamp(4rem, 5.5vw, 5rem);
 }
 
