@@ -1,26 +1,32 @@
-const items = document.querySelectorAll('.item');
-let current = 0;
+const carrosselInner = document.querySelector('.carrossel-inner');
+const items = document.querySelectorAll('.carrossel-inner .item');
+let currentIndex = 0;
 
-function showSlide(index) {
-  items.forEach((item, i) => {
-    item.classList.toggle('active', i === index);
-  });
+function updateSlide() {
+  const width = document.querySelector('.carrossel-viewport').offsetWidth;
+  carrosselInner.style.transform = `translateX(-${currentIndex * width}px)`;
 }
 
-// Botão "Próximo"
+// Avançar
 document.getElementById('next').addEventListener('click', () => {
-  current = (current + 1) % items.length;
-  showSlide(current);
+  currentIndex = (currentIndex + 1) % items.length;
+  updateSlide();
 });
 
-// Botão "Anterior"
+// Voltar
 document.getElementById('prev').addEventListener('click', () => {
-  current = (current - 1 + items.length) % items.length;
-  showSlide(current);
+  currentIndex = (currentIndex - 1 + items.length) % items.length;
+  updateSlide();
 });
 
-// Avanço automático a cada 10 segundos
+// Troca automática a cada 10s
 setInterval(() => {
-  current = (current + 1) % items.length;
-  showSlide(current);
-}, 10000); // 10000ms = 10 segundos
+  currentIndex = (currentIndex + 1) % items.length;
+  updateSlide();
+}, 10000);
+
+// Ajustar ao redimensionar
+window.addEventListener('resize', updateSlide);
+
+// Inicializar
+updateSlide();

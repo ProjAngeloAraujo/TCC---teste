@@ -107,18 +107,29 @@ nav{
 .carrossel-container {
   display: flex;
   align-items: center;
-  gap: 10px;
   background-color: #7676F0;
+  width: 100%;
+  padding: 0 21px;
+}
+
+.carrossel-viewport {
+  overflow: hidden;
   width: 100%;
 }
 
-.carrossel {
+.carrossel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
   width: 100%;
+}
+
+.item {
+  flex: 0 0 100%;
   height: 50vh;
-  overflow: hidden;
-  position: relative;
-  padding: 0 20px;
   background-color: #7676F0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carrosel-button{
@@ -128,33 +139,13 @@ nav{
     color: #FFFDFA;
 }
 
-.item {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #7676F0;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  transition: all 0.5s ease;
-  pointer-events: none;
-}
-
-.item.active {
-  opacity: 1;
-  pointer-events: auto;
-  z-index: 1;
-  display: flex;
-}
-
 .carrosel-slide-info{
     height: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     justify-content: space-between;
-    padding: 3% 0;
+    padding: 3% 20px;
     color: #FFFDFA;
 }
 
@@ -180,6 +171,12 @@ nav{
 .carrosel-slide-img{
     padding: 40px;
 }
+
+.carrosel-slide-img img{
+    width: 100%;
+    height: 100%;
+}
+
 /*informações*/
 .informações{
     display: flex;
