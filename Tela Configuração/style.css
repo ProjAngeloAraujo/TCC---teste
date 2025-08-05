@@ -16,6 +16,11 @@ body, html{
   display: flex;
 }
 
+.voltar-OTTO{
+  height: 80px;
+  width: 150px;
+}
+
 /* nav */
 
 .nav {

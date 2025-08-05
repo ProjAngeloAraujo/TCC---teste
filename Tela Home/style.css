@@ -37,6 +37,11 @@ body, html{
   font-size: 22px;
 }
 
+.voltar-OTTO{
+  height: 80px;
+  width: 150px;
+}
+
 .menu {
   list-style: none;
   width: 100%;
