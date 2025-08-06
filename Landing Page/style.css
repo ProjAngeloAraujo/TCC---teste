@@ -47,19 +47,29 @@ nav{
 }
 
 .login-button{
-    font-size: 30px;
+    font-size: clamp(2rem, 2vw, 3rem);
     background-color: #FFFDFA;
 }
 
 .login-button-login{
     border: none;
     font-weight: 700;
+    transition: 0.5s;
+}
+
+.login-button-login:hover{
+    font-size: clamp(2rem, 2.1vw, 3rem);
 }
 
 .login-button-cadastro{
     border: #F9DF73 solid 3px;
     border-radius: 15px;
     padding: 5px 25px;
+    transition: 0.5s;
+}
+
+.login-button-cadastro:hover{
+    font-size: clamp(2rem, 2.1vw, 3rem);
 }
 
 
@@ -79,6 +89,14 @@ nav{
     align-items: center;
 }
 
+.corpo-animaçâo{
+}
+
+.corpo-animaçâo img{
+    height: 30vh;
+    width: 20vw;
+}
+
 .corpo-convite{
     flex-direction: column;
     gap: 20px;
@@ -95,16 +113,26 @@ nav{
 
 .corpo-convite-cadastro{
     background-color: #F9DF73;
-    font-size: 30px;
+    font-size: clamp(2rem, 2vw, 3rem);
     font-weight: 700;
     padding: 30px;
     border-radius: 15px;
+    transition: 0.5s;
+}
+
+.corpo-convite-cadastro:hover{
+    font-size: clamp(2rem, 2.1vw, 3rem);
 }
 
 .corpo-convite-login{
-    font-size: 28px;
+    font-size: clamp(2rem, 2vw, 3rem);
     border: none;
     background-color: #FFFDFA;
+    transition: 0.5s;
+}
+
+.corpo-convite-login:hover{
+    font-size: clamp(2rem, 2.1vw, 3rem);
 }
 
 
