@@ -5,36 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Blockly -->
     <script src="blockly/blockly_compressed.js"></script>
     <script src="blockly/blocks_compressed.js"></script>
     <script src="blockly/python_compressed.js"></script>
-    <title>Login</title>
+    <script src="blockly/msg/js/pt-br.js"></script>
+    <title>Jogo Blockly</title>
 </head>
 <body>
     <div class="container">
         <main>
             <section class="corpo">
                 <header>
-
+                    <button onclick="mostrarCodigo()" style="padding:1rem 2rem; font-size:1rem; cursor:pointer;">
+                        Gerar Código
+                    </button>
                 </header>
-                <article>
-                    <div class="programação">
-                        <div>
 
-                        </div>
+                <article>
+                    <!-- Área de programação -->
+                    <div class="programação">
+                        <div id="blocklyDiv" style="height:100%; width:100%;"></div>
                     </div>
+
+                    <!-- Resultado -->
                     <div class="resultado">
                         <div>
-
+                            <pre id="codigoGerado">// O código aparecerá aqui</pre>
                         </div>
                     </div>
                 </article>
-                <footer>
-                </xml>
+
+                <!-- Footer mostrando blocos -->
+                <footer id="toolboxFooter" style="overflow-x:auto; white-space:nowrap; padding:1rem;">
+                    <button onclick="criarBloco('controls_if')">SE</button>
+                    <button onclick="criarBloco('controls_repeat_ext')">Repetir</button>
+                    <button onclick="criarBloco('math_number')">Número</button>
+                    <button onclick="criarBloco('text_print')">Imprimir</button>
                 </footer>
             </section>
-            
         </main>
-    </div>    
+    </div>
+
+    <script>
+        // Inicializar workspace SEM toolbox
+        const workspace = Blockly.inject('blocklyDiv', { toolbox: null });
+
+        // Função para criar blocos a partir do footer
+        function criarBloco(tipo) {
+            const bloco = workspace.newBlock(tipo);
+            bloco.initSvg();
+            bloco.render();
+        }
+
+        // Mostrar código Python gerado
+        function mostrarCodigo() {
+            const codigo = Blockly.Python.workspaceToCode(workspace);
+            document.getElementById("codigoGerado").textContent = codigo || "// Nenhum código gerado ainda";
+        }
+    </script>
 </body>
 </html>
