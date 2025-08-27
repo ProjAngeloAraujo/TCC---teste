@@ -18,15 +18,19 @@
         <main>
             <section class="corpo">
                 <header>
-                    <button onclick="mostrarCodigo()" style="padding:1rem 2rem; font-size:1rem; cursor:pointer;">
-                        Gerar Código
-                    </button>
+                    <a id="menuIcon">☰</a>
+                    <ul id="menuLista">
+                        <li>Retomar</li>
+                        <li>Dicas</li>
+                        <li>Sair do jogo</li>
+                    </ul>
+                    <button onclick="mostrarCodigo()">Gerar Código</button>
                 </header>
 
                 <article>
                     <!-- Área de programação -->
                     <div class="programação">
-                        <div id="blocklyDiv" style="height:100%; width:100%;"></div>
+                        <div id="blocklyDiv" style="height: 100%; width: 100%; background-color: rgb(2, 38, 69); border-radius: 1vw;"></div>
                     </div>
 
                     <!-- Resultado -->
@@ -48,22 +52,6 @@
         </main>
     </div>
 
-    <script>
-        // Inicializar workspace SEM toolbox
-        const workspace = Blockly.inject('blocklyDiv', { toolbox: null });
-
-        // Função para criar blocos a partir do footer
-        function criarBloco(tipo) {
-            const bloco = workspace.newBlock(tipo);
-            bloco.initSvg();
-            bloco.render();
-        }
-
-        // Mostrar código Python gerado
-        function mostrarCodigo() {
-            const codigo = Blockly.Python.workspaceToCode(workspace);
-            document.getElementById("codigoGerado").textContent = codigo || "// Nenhum código gerado ainda";
-        }
-    </script>
+    <script src="jogo.js"></script>
 </body>
 </html>
