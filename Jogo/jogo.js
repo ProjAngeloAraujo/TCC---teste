@@ -27,5 +27,5 @@ const menuLista = document.getElementById("menuLista");
 
 // Quando clicar no ícone ☰, alterna mostrar/esconder
 menuIcon.addEventListener("click", function() {
-    menuLista.style.display = (menuLista.style.display === "block") ? "none" : "block";
+    menuLista.style.display = (menuLista.style.display === "flex") ? "none" : "flex";
 });
