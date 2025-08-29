@@ -102,6 +102,23 @@ header > a{
     cursor: pointer;
 }
 
+.JogabilidadeImg{
+    display: none;                
+    position: fixed;            
+    top: 0;
+    left: 0;
+    width: 100vw;             
+    height: 100vh;  
+    z-index: 2000;    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Sair{
+    display: none;
+}
+
 header > button{
     padding: 0.3rem;
     background-color: #F9DF73;

@@ -29,3 +29,36 @@ const menuLista = document.getElementById("menuLista");
 menuIcon.addEventListener("click", function() {
     menuLista.style.display = (menuLista.style.display === "flex") ? "none" : "flex";
 });
+
+const Jogabilidade = document.getElementById("Jogabilidade");
+const JogabilidadeImg = document.getElementById("JogabilidadeImg");
+
+// Clicar no li abre a imagem
+Jogabilidade.addEventListener("click", function() {
+    JogabilidadeImg.style.display = "block";
+});
+
+// Clicar na imagem fecha (sem reabrir)
+JogabilidadeImg.addEventListener("click", function(event) {
+    event.stopPropagation(); // impede que clique "suba" para o li
+    JogabilidadeImg.style.display = "none";
+});
+
+
+const Ul = document.getElementById("Ul");
+const Sair = document.getElementById("Sair");
+const DivSair = document.getElementById("DivSair");
+const NãoSair = document.getElementById("NãoSair");
+const Retomar = document.getElementById("Retomar");
+// Clicar no li abre a imagem
+Sair.addEventListener("click", function() {
+    Ul.style.display = "none";
+    DivSair.style.display = "flex";
+});
+NãoSair.addEventListener("click", function() {
+    DivSair.style.display = "none";
+    Ul.style.display = "flex";
+});
+Retomar.addEventListener("click", function() {
+    menuLista.style.display = (menuLista.style.display === "flex") ? "none" : "flex";
+});
