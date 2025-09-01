@@ -166,6 +166,9 @@ article > div{
     background-color: #D9D9D9;
     border-radius: 1vw;
     border: 1px solid black;
+    padding: 1rem;
+    font-size: clamp(1rem, 1vw, 2rem);
+    color: #7676F0;
 }
 
 footer{
@@ -174,6 +177,15 @@ footer{
     background-color: #F9DF73;
     border-radius: 1.2vw;
     border: 2px solid black ;
+}
+
+footer button{
+    padding: 0.5rem;
+    background-color: #7676F0;
+    border-radius: 10px;
+    font-size: clamp(1rem, 1.5vw, 3rem);
+    color: #f0f8ff;
+    border: 2px solid #f0f8ff;
 }
 
 /* Mensagens de erro e sucesso */
