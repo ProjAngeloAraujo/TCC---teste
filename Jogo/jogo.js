@@ -15,11 +15,39 @@
      bloco.moveBy(centerX, centerY);
  }
 
- // Mostrar código Python gerado
- function mostrarCodigo() {
-     const codigo = Blockly.Python.workspaceToCode(workspace);
-     document.getElementById("codigoGerado").textContent = codigo || "// Nenhum código gerado ainda";
- }
+// Mostrar código Python gerado e verificar a fase
+function mostrarCodigo() {
+    const codigo = Blockly.Python.workspaceToCode(workspace).trim();
+    document.getElementById("codigoGerado").textContent = codigo || "// Nenhum código gerado ainda";
+
+    verificarFase(codigo); // já chama a verificação
+}
+
+// Verificar se a fase foi concluída
+function verificarFase(codigo) {
+    // Exemplo: Fase 1 espera o código "print('Olá')"
+    const esperado = "0";
+
+    if (codigo === esperado) {
+        mostrarMensagem("Parabéns! Você concluiu a fase.", "success");
+    } else {
+        mostrarMensagem("Ops! Tente novamente.", "error");
+    }
+}
+
+// Função para mostrar mensagens (usando CSS já existente)
+function mostrarMensagem(texto, tipo) {
+    // remove mensagens antigas
+    document.querySelectorAll(".messages").forEach(m => m.remove());
+
+    const ul = document.createElement("ul");
+    ul.className = "messages " + tipo;
+    ul.innerHTML = `<li>${texto}</li>`;
+    document.body.appendChild(ul);
+
+    // sumir depois de 3s
+    setTimeout(() => ul.remove(), 3000);
+}
 
 // Pega o ícone e a lista
 const menuIcon = document.getElementById("menuIcon");
