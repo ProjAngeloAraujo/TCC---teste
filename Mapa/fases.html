@@ -1,0 +1,62 @@
+<!-- {% load static %} -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fases.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'appOTTO/img/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'appOTTO/img/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'appOTTO/img/favicon-16x16.png' %}">
+    <link rel="icon" href="{% static 'appOTTO/img/favicon.ico' %} ">
+    <link rel="manifest" href="{% static 'appOTTO/img/site.webmanifest' %}">
+    <title>Fases</title>
+</head>
+<body>
+    <!-- {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li class="{{ message.tags }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <h1>Dashboard</h1><br>
+    <p>Você está logado!</p>
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Sair</button>
+    </form> -->
+
+    <script src="fases.js"></script>
+    <div class="container">
+        <nav class="nav">
+            <div class="logo">
+                <a><img src="{% static 'appOTTO/img/OTTO.png' %}" class="voltar-OTTO"></a>
+            </div>
+            <ul class="menu">
+                <li class="active">Home</li>
+                <li>Meu Perfil</li>
+                <li>Fases</li>
+                <li class="botao-navegar" data-url="{% url 'config' %}">Configurações</li>
+            </ul>
+        </nav>
+        <header>
+            <section id="Home" class="conteudo">
+                <button>Fase 1</button>
+                <button>Fase 2</button>
+                <button>Fase 3</button>
+                <button>Fase 4</button>
+                <button>Fase 5</button>
+                <button>Fase 6</button>
+                <button>Fase 7</button>
+                <button>Fase 8</button>
+                <button>Fase 9</button>
+                <button>Fase 10</button>
+            </section>
+        </header>
+    </div>
+    <script src="fases.js"></script>
+</body>
+</html>
