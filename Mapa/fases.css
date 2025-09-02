@@ -94,6 +94,32 @@ header{
   border-radius: 25px;
   padding: 50px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.conteudo > button {
+  aspect-ratio: 1/1;        
+  width: clamp(20px, 8vw, 60px);    
+  border-radius: 50%;                
+  border: 2px solid white;
+  background-color: #7676F0;      
+  color: white;
+  font-size: clamp(0.5rem, 1vw, 1rem); 
+  display: flex;
+  flex-direction: column;    /* empilha o texto */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1.2;          /* deixa mais juntinho */
+}
+
+.conteudo > button:nth-child(odd) {
+  margin-left: -10%; 
+}
+
+.conteudo > button:nth-child(even) {
+  margin-right: -10%; 
 }
