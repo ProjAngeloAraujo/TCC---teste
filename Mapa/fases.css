@@ -98,7 +98,7 @@ header{
   align-items: center;
 }
 
-.conteudo > button {
+.conteudo > a {
   aspect-ratio: 1/1;        
   width: clamp(20px, 8vw, 60px);    
   border-radius: 50%;                
@@ -115,10 +115,10 @@ header{
   line-height: 1.2;          /* deixa mais juntinho */
 }
 
-.conteudo > button:nth-child(odd) {
+.conteudo > a:nth-child(odd) {
   margin-left: -10%; 
 }
 
-.conteudo > button:nth-child(even) {
+.conteudo > a:nth-child(even) {
   margin-right: -10%; 
 }
