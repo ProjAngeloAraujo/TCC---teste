@@ -92,7 +92,6 @@ header{
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 25px;
-  padding: 50px;
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-around;
