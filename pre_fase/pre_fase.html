@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pre_fase.css">
     <link rel="stylesheet" href="{% static 'appOTTO/css/login.css' %}">
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'appOTTO/img/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'appOTTO/img/favicon-32x32.png' %}">
@@ -15,20 +16,46 @@
     <title>{{ fase.titulo }}</title>
 </head>
 <body>
-   <div class="container">
+  
+        <!--  -->
+
+  <div class="container">
+        <nav class="nav">
+            <div class="logo">
+                <a><img src="{% static 'appOTTO/img/OTTO.png' %}" class="voltar-OTTO"></a>
+            </div>
+            <ul class="menu">
+                <li class="botao-navegar" data-url="{% url 'dashboard' %}">Home</li>
+                <li>Meu Perfil</li>
+                <li class="botao-navegar" data-url="{% url 'fases' %}">Fases</li>
+                <li class="active">Configurações</li>
+            </ul>
+        </nav>
         <main>
-            <section class="corpo">
-  <a href="{% url 'fases' %}">← Voltar ao mapa</a>
+           <section id="configuração" class="conteudo">
+              <a href="{% url 'fases' %}">Voltar</a>
 
-  <h1>{{ fase.titulo }}</h1>
-  <p>{{ fase.descricao }}</p>
+              <img src="" alt="">
 
-  <img src="" alt="{{ fase.titulo }}" style="max-width: 320px; height: auto;">
+              <div>
+                <h1>{{ fase.titulo }}</h1>
+                <p>{{ fase.fase }}</p>
+              </div>
 
-  <p>
-    <a href="{% url 'fase' numero %}">
-      <button>Começar Fase</button>
-    </a>
-  </p>
+              <div>
+                <h2>Conteúdo</h2>
+                <p>{{ fase.descricao }}</p>
+              </div>
+              
+
+
+              <p>
+                <a href="{% url 'fase' numero %}">
+                  <button>Iniciar</button>
+                </a>
+              </p>
+           </section>
+        </main>
+    </div>
 </body>
 </html>
